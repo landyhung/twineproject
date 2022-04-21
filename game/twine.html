@@ -9,7 +9,10 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play twine.</tw-noscript></noscript></tw-story>
-<tw-storydata name="twine" startnode="22" creator="Twine" creator-version="2.3.16" ifid="38BD7A89-B6B3-40DA-8C63-CCBD3C130D41" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="621,241" size="100,100">(text-colour:black)[Goood morning, now are you ready to start your day?] 
+<tw-storydata name="twine" startnode="22" creator="Twine" creator-version="2.3.16" ifid="38BD7A89-B6B3-40DA-8C63-CCBD3C130D41" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio= document.createElement ('audio');
+audio.src= 'https://landyhung.github.io/twineproject/images/Sunshine - Telecasted.mp3';
+audio.loop= true;
+audio.play ();</script><tw-passagedata pid="1" name="intro" tags="" position="621,241" size="100,100">(text-colour:black)[Goood morning, now are you ready to start your day?] 
  &lt;img src = &quot;https://landyhung.github.io/twineproject/images/bedrroom.jpg&quot;&gt;
 [[yes-&gt;yes]]
 [[no-&gt;no]]
@@ -76,7 +79,7 @@ Goodnight(click-goto:?page,&quot;intro&quot;)
 
 [[You don&#39;t have wallet yet-&gt;wallet]]
 
-[[next-&gt;intro]]</tw-passagedata><tw-passagedata pid="23" name="wallet" tags="" position="669,375" size="100,100">{
+</tw-passagedata><tw-passagedata pid="23" name="wallet" tags="" position="669,375" size="100,100">{
 (set: $wallet to true)
 }
 [[You got the wallet-&gt;money]]
