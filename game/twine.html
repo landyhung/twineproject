@@ -20,6 +20,7 @@
 &lt;img src = &quot;https://landyhung.github.io/twineproject/images/mario.jpg&quot;&gt;
 [[yes-&gt;yes-mario]]
 [[no-&gt;no-mario]](enchant:?page,(bg:#ffc9c9))</tw-passagedata><tw-passagedata pid="4" name="yes-mario" tags="" position="987,8" size="100,100">Congrats, you just won! What would you like to do next?
+ &lt;img src = &quot;https://landyhung.github.io/twineproject/images/mario.gif&quot;&gt;
 [[travel -&gt;travel]]
 [[grab a meal-&gt;grab a meal]]
 [[Stay at home-&gt;stay home]](enchant:?page,(bg:#ffc9c9))</tw-passagedata><tw-passagedata pid="5" name="no-mario" tags="" position="987,119" size="100,100">What would you like to do instead?
@@ -60,9 +61,10 @@ Sleep(enchant:?page,(bg:#d8f5a2))</tw-passagedata><tw-passagedata pid="6" name="
 [[Play Mario cart-&gt;yes-mario]](enchant:?page,(bg:#bac8ff)</tw-passagedata><tw-passagedata pid="17" name="travel-home" tags="" position="1185,274.5" size="100,100">Great Trip!Now what would you like to do?
 [[Sleep-&gt;sleep]]
 [[Play Mario Cart-&gt;yes-mario]](enchant:?page,(bg:#bac8ff))</tw-passagedata><tw-passagedata pid="18" name="sleep" tags="" position="1390,234" size="100,100">Been a fun day, time to sleep.
-Goodnight(click-goto:?page,&quot;intro&quot;)</tw-passagedata><tw-passagedata pid="19" name="stay home" tags="" position="1180,14" size="100,100">Are you ready to sleep?
+Goodnight(click-goto:?page,&quot;intro&quot;)
+ &lt;img src = &quot;https://landyhung.github.io/twineproject/images/gn.gif&quot;&gt;</tw-passagedata><tw-passagedata pid="19" name="stay home" tags="" position="1180,14" size="100,100">Are you ready to sleep?
 [[yes-&gt;sleep]]
-[[no-&gt;yes]]</tw-passagedata><tw-passagedata pid="20" name="put 1 gif here at yes marrio" tags="" position="884,0" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name=" gif for goodnight" tags="" position="1450,353" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[no-&gt;yes]]</tw-passagedata><tw-passagedata pid="20" name=" gif for goodnight" tags="" position="1450,353" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="weather" tags="" position="720,120" size="100,100">today&#39;s weather is...</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
