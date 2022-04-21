@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play twine.</tw-noscript></noscript></tw-story>
-<tw-storydata name="twine" startnode="1" creator="Twine" creator-version="2.3.16" ifid="38BD7A89-B6B3-40DA-8C63-CCBD3C130D41" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="620,241" size="100,100">(text-colour:black)[Goood morning, you just woke up, are you ready to start your day?] 
+<tw-storydata name="twine" startnode="22" creator="Twine" creator-version="2.3.16" ifid="38BD7A89-B6B3-40DA-8C63-CCBD3C130D41" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="621,241" size="100,100">(text-colour:black)[Goood morning, now are you ready to start your day?] 
  &lt;img src = &quot;https://landyhung.github.io/twineproject/images/bedrroom.jpg&quot;&gt;
 [[yes-&gt;yes]]
 [[no-&gt;no]]
@@ -28,7 +28,7 @@
 [[grab a meal-&gt;grab a meal]]
 Sleep(enchant:?page,(bg:#d8f5a2))</tw-passagedata><tw-passagedata pid="6" name="no" tags="" position="493,242" size="100,100">30 minutes later... are you ready to start your day?
 [[yes-&gt;yes]]
-[[no-&gt;no]]</tw-passagedata><tw-passagedata pid="7" name="travel" tags="" position="856,295" size="100,100">where would you like to go?
+[[no-&gt;no]]</tw-passagedata><tw-passagedata pid="7" name="travel" tags="" position="875,400" size="100,100">where would you like to go?
 [[somewhere warm-&gt;somewhere warm]]
 [[somewhere cold-&gt;somewhere cold]]
 [[somewhere urban-&gt;somewhere urban]](enchant:?page,(bg:#bac8ff))</tw-passagedata><tw-passagedata pid="8" name="somewhere warm" tags="" position="989,239" size="100,100">You have now arrived in Hawaii, what would you like to do next
@@ -58,13 +58,31 @@ Sleep(enchant:?page,(bg:#d8f5a2))</tw-passagedata><tw-passagedata pid="6" name="
 [[Go Home-&gt;meal-home]]
 [[Travel-&gt;travel]](enchant:?page,(bg:#d0bfff))</tw-passagedata><tw-passagedata pid="16" name="meal-home" tags="" position="1178,600" size="100,100">You have just got back home, what do you want to do
 [[Sleep-&gt;sleep]]
-[[Play Mario cart-&gt;yes-mario]](enchant:?page,(bg:#bac8ff)</tw-passagedata><tw-passagedata pid="17" name="travel-home" tags="" position="1185,274.5" size="100,100">Great Trip!Now what would you like to do?
+[[Play Mario cart-&gt;yes-mario]](enchant:?page,(bg:#bac8ff))</tw-passagedata><tw-passagedata pid="17" name="travel-home" tags="" position="1185,274.5" size="100,100">Great Trip!Now what would you like to do?
 [[Sleep-&gt;sleep]]
 [[Play Mario Cart-&gt;yes-mario]](enchant:?page,(bg:#bac8ff))</tw-passagedata><tw-passagedata pid="18" name="sleep" tags="" position="1390,234" size="100,100">Been a fun day, time to sleep.
 Goodnight(click-goto:?page,&quot;intro&quot;)
  &lt;img src = &quot;https://landyhung.github.io/twineproject/images/gn.gif&quot;&gt;</tw-passagedata><tw-passagedata pid="19" name="stay home" tags="" position="1180,14" size="100,100">Are you ready to sleep?
 [[yes-&gt;sleep]]
-[[no-&gt;yes]]</tw-passagedata><tw-passagedata pid="20" name=" gif for goodnight" tags="" position="1450,353" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="weather" tags="" position="720,120" size="100,100">today&#39;s weather is...</tw-passagedata></tw-storydata>
+[[no-&gt;yes]]</tw-passagedata><tw-passagedata pid="20" name=" gif for goodnight" tags="" position="1450,353" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="Untitled Passage" tags="" position="869,244.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="startup" tags="" position="587,116.5" size="100,100">(enchant:?page,(bg:#ffdeeb))
+(text-colour:#bac8ff)[Today&#39;s weather is
+
+{
+(set: $event to (random: 1,3))
+}
+(if: $event is 1)[Sunny for the entire day]
+(elseif: $event is 2)[Oops, looks like today will be raining hard]
+(elseif: $event is 3)[The temperature has just hit all time low, remember to bring your jacket]]
+
+[[You don&#39;t have wallet yet-&gt;wallet]]
+
+[[next-&gt;intro]]</tw-passagedata><tw-passagedata pid="23" name="wallet" tags="" position="669,375" size="100,100">{
+(set: $wallet to true)
+}
+[[You got the wallet-&gt;money]]
+</tw-passagedata><tw-passagedata pid="24" name="money" tags="" position="664,486.5" size="100,100">(if: $wallet is true)[You put in more cash into the wallet (set: $money to it +1)]
+
+[[next-&gt;intro]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
